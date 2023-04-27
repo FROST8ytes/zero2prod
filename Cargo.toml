@@ -4,8 +4,21 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Ammar Farhan Mohamad Rizam <ammarfmr11@gmail.com>"]
 license = "MIT"
-license-file = "LICENSE.md"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "zero2prod"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+actix-http = "3.3.1"
+actix-web = "4.3.1"
+
+[dev-dependencies]
+actix-rt = "2.8.0"
+reqwest = "0.11.16"
+tokio = "1.28.0"
